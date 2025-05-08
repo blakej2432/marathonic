@@ -1,0 +1,75 @@
+:root{
+    --mar-main-color: #FF4B4B;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    line-height: 1;
+    font-size: 1.6rem;
+}
+.content-center{
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding:0 1.6rem;
+    background-color: pink;
+}
+
+/* header */
+header{
+    .content-center{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        height: 8rem;
+        h1{
+            max-width:120px;
+            a{
+                display: flex;
+                align-items: center;
+            }
+        }
+        ul.main-nav{
+            display: flex;
+            gap: 50px;
+            margin-right: 50px;
+            font-weight: 800;
+        }
+        ul.gnb-list{
+            display: flex;
+            gap: 40px;
+            margin-left: auto;
+            font-weight: 800;
+            li{ 
+                display: flex;
+                align-items: center;
+                a{
+                    display: block;
+                    img{
+                        max-width:24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* main */
+.race-wrap{
+    padding: 2rem 0;
+    .banner-wrap{
+        padding: 0 1rem;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid black;
+            width: 100%;
+            li {
+                border: 1px solid red;
+            }
+        }
+    }
+}

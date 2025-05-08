@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="content-center">
-            <h1 class="logo"><a href="#"><img src="" alt="헤더 로고"></a></h1>
+            <h1 class="logo"><a href="#"><img src="{% static 'race/images/main_logo.png' %}" alt="헤더 로고"></a></h1>
             <nav>
                 <ul class="main-nav">
                     <li><a href="#">마라톤 일정</a></li>
@@ -20,20 +20,107 @@
                     <li><a href="#">러닝화 찾기</a></li>
                 </ul>
             </nav>
+            
             <ul class="gnb-list">
                 <li><a href="#">로그인</a></li>
-                <li><a href="#">search</a></li>
+                <li><a href="#"><img src="{% static 'race/images/search_icon.png' %}" alt=""> </a></li>
             </ul>
         </div>
     </header>
     
-    
-    <main>
+    <main id="container">
+        <section class="race-wrap">
+            <div class="content-center">
+                <h2 class="blind">대회 일정 리스트</h2>
+                <div class="race-top-wrap">
+                    <div class="banner-wrap">
+                        <ul class="banner-slider">
+                            <li><a href="#"><img src="" alt="배너1"></a></li>
+                            <li><a href="#"><img src="" alt="배너2"></a></li>
+                            <li><a href="#"><img src="" alt="배너3"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="race-bottom-wrap">
+                    <h3>대회 목록</h3>
+                    <div class="race-filter">
+                        <ul id="main-filter">
+                            <li class="filter-btn status">대회상태 <span class="arrow">▼</span></li>
+                            <li class="filter-btn loc">지역 <span class="arrow">▼</span></li>
+                            <li class="filter-btn course">코스길이 <span class="arrow">▼</span></li>
+                            <li class="filter-btn date">날짜 <span class="arrow">▼</span></li>
+                        </ul>
+                    </div>
+                    <div class="race-list-wrap">
+                        <ul class="race-list">
+                            <li>
+                                <div class="race-img">
+                                    <img src="" alt="대회 로고">
+                                    <button class="bookmark"></button>
+                                </div>
+                                <div class="race-info">
+                                    <p class="race-title"></p>
+                                    <p class="race-date"></p>
+                                    <p class="course"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="race-img"></div>
+                                <div class="race-info">
+                                    <p class="race-title"></p>
+                                    <p class="race-date"></p>
+                                    <p class="course"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="race-img"></div>
+                                <div class="race-info">
+                                    <p class="race-title"></p>
+                                    <p class="race-date"></p>
+                                    <p class="course"></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="race-img"></div>
+                                <div class="race-info">
+                                    <p class="race-title"></p>
+                                    <p class="race-date"></p>
+                                    <p class="course"></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
+        <div class="footer-top">
+            <div class="content-center">
+                <ul class="footer-check">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+                <address>
+                    <ul class="address">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </address>
+            </div>
 
+        </div>
+        <div class="footer-bottom">
+            
+        </div>
     </footer>
 </body>
 </html>
