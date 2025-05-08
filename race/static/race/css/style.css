@@ -15,7 +15,6 @@ body{
     max-width: 1400px;
     margin: 0 auto;
     padding:0 1.6rem;
-    background-color: pink;
 }
 
 /* header */
@@ -25,6 +24,9 @@ header{
         align-items: center;
         gap: 50px;
         height: 8rem;
+        color: #262626;
+        font-size: 2rem;
+
         h1{
             max-width:120px;
             a{
@@ -60,16 +62,134 @@ header{
 /* main */
 .race-wrap{
     padding: 2rem 0;
+    color: #262626;
+
     .banner-wrap{
         padding: 0 1rem;
         ul {
+            padding: 0 5rem;
             display: flex;
-            justify-content: space-between;
-            border: 1px solid black;
             width: 100%;
+            height: 300px;
+            gap: 20px;
             li {
-                border: 1px solid red;
+                flex: 1;
+                transition: flex 0.4s;
+                background: gray;
+                border-radius: 15px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:nth-child(1){
+                    .banner-slider.default & {
+                        flex: 3;
+                    }
+                }
+
+                &.active {
+                    flex: 3;
+                }
+                a{
+                    width:100%;
+                    height:100%;
+                    display: block;
+                    img{
+                        width:100%;
+                        height:100%;
+                        object-fit:cover;
+                        border-radius: 15px;
+                    }
+                }
+
             }
+        }
+    }
+    .race-bottom-wrap{
+        padding: 30px 0;
+        h3{ 
+            padding: 20px 0 ;
+            color: #444444;
+            font-size: 2.5rem;
+        }
+        ul#main-filter{
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            li{ 
+                width: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #bab6b6;
+                border-radius: 10px;
+                padding: 10px 10px;
+                cursor: pointer;
+                line-height: 1;
+                span{
+                    padding-left: 10px;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        .race-list-wrap{
+            padding: 20px 0;
+            ul.race-list{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+                row-gap: 30px;
+                li{ 
+                    cursor: pointer;
+                    border: 1px solid #747272;
+                    border-radius: 5px;
+                    height: 300px;
+                    .race-img{
+                        border-radius: 5px;
+                        height: 200px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .race-info{
+                        padding: 7px;
+                        display:flex;
+                        flex-direction: column;
+                        gap:7px;
+                        .race-title{
+                            font-size: 2rem;
+                            font-weight: 800;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* footer */
+.footer-top{
+    border-top: 1px solid #d6d4d4;
+    .content-center{
+        /* background-color: rgb(247, 206, 213);   */
+    }
+}
+.footer-check{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display:flex;
+    justify-content: flex-start;
+    gap: 18px;
+    li{
+        &:nth-child(1){
+            color: #2747dc;
+            font-weight: 800;
+        }
+        &:last-child{
+            font-weight: 800;
         }
     }
 }
