@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'race/index.html')
+    return render(request, 'race/race.html')

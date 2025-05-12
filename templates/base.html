@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock%}</title>
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <div class="content-center">
+            <h1 class="logo"><a href="#"><img src="{% static 'images/main_logo.png' %}" alt="헤더 로고"></a></h1>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="#">마라톤 일정</a></li>
+                    <li><a href="#">저장한 대회</a></li>
+                    <li><a href="#">러닝화 찾기</a></li>
+                </ul>
+            </nav>
+            
+            <ul class="gnb-list">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#"><img src="{% static 'images/search_icon.png' %}" alt=""> </a></li>
+            </ul>
+        </div>
+    </header>
+    <main id="container">
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="content-center">
+                <ul class="footer-check">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">저작권정책</a></li>
+                    <li><a href="#">고객서비스헌장</a></li>
+                    <li><a href="#">전자우편무단수집거부</a></li>
+                    <li><a href="#">찾아오시는 길</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                </ul>
+                <address>
+                    <ul class="address">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </address>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            
+        </div>
+    </footer>
+    {% block extra_js %}{% endblock %}
+</body>
