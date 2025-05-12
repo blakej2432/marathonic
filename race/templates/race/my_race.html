@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'race/css/race.css'%}">
+{% endblock %}
+
+{% block title %}
+    마라토닉 | 저장한대회
+{% endblock %}
+
+{% block content %}
+<section class="race-wrap">
+    <div class="content-center">
+        <h2 class="blind">대회 일정 리스트</h2>
+        <div class="race-bottom-wrap">
+            <h3>저장한 대회</h3>
+            <div class="race-filter">
+                <ul id="main-filter">
+                    <li class="filter-btn status">대회상태 <span class="arrow">▼</span></li>
+                    <li class="filter-btn loc">지역 <span class="arrow">▼</span></li>
+                    <li class="filter-btn course">코스길이 <span class="arrow">▼</span></li>
+                    <li class="filter-btn date">날짜 <span class="arrow">▼</span></li>
+                </ul>
+            </div>
+            <div class="race-list-wrap">
+                <ul class="race-list">
+                    <li>
+                        <div class="race-img">
+                            <img src="{% static 'race/images/race-sample.jpg' %}" alt="대회 로고">
+                            <button class="bookmark"></button>
+                        </div>
+                        <div class="race-info">
+                            <p class="race-title">2025 양양강변 마라톤대회</p>
+                            <p class="race-date">2025.09.13</p>
+                            <p class="race-loc">강원도 양양군</p>
+                            <p class="course">5km, 10km, 하프, 풀</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="race-img">
+                            <img src="{% static 'race/images/race-sample.jpg' %}" alt="대회 로고">
+                            <button class="bookmark"></button>
+                        </div>
+                        <div class="race-info">
+                            <p class="race-title">2025 양양강변 마라톤대회</p>
+                            <p class="race-date">2025.09.13</p>
+                            <p class="race-loc">강원도 양양군</p>
+                            <p class="course">5km, 10km, 하프, 풀</p>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script defer src="{% static 'race/js/banner.js' %}"></script>
+{% endblock %}

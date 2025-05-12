@@ -10,6 +10,12 @@ body{
     line-height: 1;
     font-size: 1.6rem;
 }
+
+main {
+    min-height: 200vh; 
+}
+
+
 .content-center{
     width: 100%;
     max-width: 1400px;
