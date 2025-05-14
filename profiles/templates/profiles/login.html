@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'profiles/css/login.css'%}">
+{% endblock %}
+
+{% block title %}
+    마라토닉 | 로그인
+{% endblock %}
+
+{% block content %}
+<section class="login-wrap">
+    <div class="login-member">
+        <h2 class="title">로그인</h2>
+        <div class="login-member-wrap">
+            <div class="login">
+                <p>SNS로 간편하게 로그인하고 더 많은 서비스를<br>즐겨보세요!</p>
+                <ul class="social-login">
+                    <li><a href="/accounts/kakao/login/" class="kakao"><span class="icon"></span>카카오로 계속하기</a></li>
+                    <li><a href="#" class="naver"><span class="icon"></span>네이버로 계속하기</a></li>
+                    <li><a href="#" class="google"><span class="icon"></span>Google로 계속하기</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

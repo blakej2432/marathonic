@@ -14,17 +14,27 @@
     <div class="body-wrap">
         <header>
             <div class="content-center">
-                <h1 class="logo"><a href="#"><img src="{% static 'images/main_logo.png' %}" alt="헤더 로고"></a></h1>
+                <h1 class="logo"><a href="/"><img src="{% static 'images/main_logo.png' %}" alt="헤더 로고"></a></h1>
                 <nav>
                     <ul class="main-nav">
                         <li><a href="{% url 'race-index' %}">마라톤 일정</a></li>
-                        <li><a href="{% url 'my-race' %}">저장한 대회</a></li>
+                        <li><a href="#">러너 라운지</a></li>
                         <li><a href="#">러닝화 찾기</a></li>
                     </ul>
                 </nav>
                 
                 <ul class="gnb-list">
-                    <li><a href="#">로그인</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="mypage"><a href="{% url 'account_logout' %}">마이페이지</a>
+                        <ul class="mypage_menu">
+                            <li>저장한 대회</li>
+                            <li>로그아웃</li>
+                            <li>회원탈퇴</li>
+                        </ul>
+                    </li>
+                    {% else %}
+                    <li ><a href="{% url 'social-login' %}">로그인</a></li>
+                    {% endif %}
                     <li><a href="#"><img src="{% static 'images/search_icon.png' %}" alt=""> </a></li>
                 </ul>
             </div>

@@ -12,13 +12,13 @@ body{
 }
 
 main {
-    min-height: 200vh; 
+    min-height: 250vh; 
 }
 
 
 .content-center{
     width: 100%;
-    max-width: 1400px;
+    max-width: 1320px;
     margin: 0 auto;
     padding:0 1.6rem;
 }
@@ -31,7 +31,7 @@ header{
         gap: 50px;
         height: 8rem;
         color: #262626;
-        font-size: 2rem;
+        font-size: 1.7rem;
 
         h1{
             max-width:120px;
@@ -61,6 +61,23 @@ header{
                     }
                 }
             }
+            .mypage{
+                color: rgb(240, 93, 134);
+                ul.mypage_menu{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding: 10px 10px;
+                    color: #262626;
+                    border: 1px solid #cfcdcd;
+                    border-radius: 5px;
+                    li{
+                        margin: 0 auto;
+                    }
+
+                }
+            }
+        
         }
     }
 }

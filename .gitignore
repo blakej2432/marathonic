@@ -6,3 +6,4 @@ __pycache__
 /mediafiles
 .DS_Store
 .vscode
+.env

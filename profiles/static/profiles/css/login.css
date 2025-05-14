@@ -1,0 +1,83 @@
+
+/* main */
+.login-wrap{
+    display: flex;
+    align-items: center;
+    height: calc(80vh - 80px);
+}
+.login-member{
+    background: white;
+    border: 1px solid #c6c3c3;
+    border-radius: 30px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    width: 450px;
+}
+.login-member .title{
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.login-member .login p{
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+.social-login{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+  
+.social-login li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    display: flex;
+    position: relative;
+}
+  
+.social-login .icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: no-repeat center center;
+    position: absolute;
+    left: 15px;
+}
+  
+.kakao{
+    background-color: #FEE500;
+    color: black;
+}
+.kakao .icon{
+    background: url('../images/kakao.svg');
+    background-size: contain;
+    position: absolute;
+    left: 15px;
+}
+.naver {
+    background-color: #03CF5D;
+    color: white;
+}
+.naver .icon{
+    background: url('../images/naverlogin.svg');
+    background-size: contain;
+    color: white;
+    filter: invert(1);
+}
+.google{
+    background-color: white;
+    border: 1px solid #d1cdcd;
+    color: black;
+}
+.google .icon {
+    background: url('../images/google.svg');
+    background-size: contain;
+}
+  
