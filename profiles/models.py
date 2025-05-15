@@ -1,6 +1,7 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from profiles.manager import CustomUserManager
 from race.models import Race
 
 class CustomUser(AbstractUser):
@@ -13,6 +14,8 @@ class CustomUser(AbstractUser):
         verbose_name="저장한대회"
         )
     
+    objects = CustomUserManager()
+
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 

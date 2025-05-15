@@ -25,11 +25,11 @@
                 
                 <ul class="gnb-list">
                     {% if user.is_authenticated %}
-                    <li class="mypage"><a href="{% url 'account_logout' %}">마이페이지</a>
+                    <li class="mypage"><a href="#">마이페이지</a>
                         <ul class="mypage_menu">
-                            <li>저장한 대회</li>
-                            <li>로그아웃</li>
-                            <li>회원탈퇴</li>
+                            <li><a href="{% url 'my-race' %}">저장한 대회</a></li>
+                            <li><a href="{% url 'account_logout' %}">로그아웃</a></li>
+                            <li><a href="#">회원탈퇴</a></li>
                         </ul>
                     </li>
                     {% else %}

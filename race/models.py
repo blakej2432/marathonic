@@ -1,7 +1,7 @@
 from django.db import models
 
 class CourseType(models.Model):
-    code = models.CharField(max_length=10, unique=True)
+    code = models.CharField(max_length=10)
     name = models.CharField(max_length=20)
 
     def __str__(self):
@@ -16,6 +16,7 @@ class CourseType(models.Model):
 class Race(models.Model):
     title = models.CharField(max_length=255, verbose_name="대회제목")
     date = models.DateField(verbose_name="대회날짜")
+    city = models.CharField(max_length=100, verbose_name="도시")
     region = models.CharField(max_length=100, verbose_name="지역")
 
     course_type = models.ManyToManyField(
