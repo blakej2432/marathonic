@@ -1,0 +1,37 @@
+{% load static %}
+
+<div id="raceModal" class="modal" style="display:none;">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3 id="modal-title"></h3>
+        <div class="modal-content-top">
+            <div class="status">
+                <p>대회상태</p>
+                <p id="modal-status"></p>
+            </div>
+            <div class="region">
+                <p>위치</p>
+                <p id="modal-loc"></p>
+            </div>
+        </div>
+
+        <div class="modal-content-middle">
+            <div class="course">
+                <p>코스유형</p>
+                <p id="modal-course"></p>
+            </div>
+            <div class="date">
+                <p>날짜</p>
+                <p id="modal-date"></p>
+            </div>
+        </div>
+
+        <div class="modal-content-bottom">
+            <div class="homepage">
+                <p>홈페이지 바로가기</p>
+                <p id="modal-homepage"></p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+{% load static %}
+
+<div class="race-filter">
+    <ul id="main-filter">
+        <li class="filter-btn status">대회상태 <span class="arrow">▼</span></li>
+        <li class="filter-btn loc">지역 <span class="arrow">▼</span></li>
+        <li class="filter-btn course">코스유형 <span class="arrow">▼</span></li>
+        <li class="filter-btn date">날짜 <span class="arrow">▼</span></li>
+        {% include 'race/race_modal.html' %}
+    </ul>
+</div>
+<div class="race-list-wrap">
+    <ul class="race-list">
+        {% for race in races %}
+        <li class="race-item" data-id="{{ race.id }}">
+            <div class="race-img">
+                {% if race.race_image %}
+                <img src="{{ race.race_image.url }}" alt="{% static 'race/images/race-sample.jpg' %}">
+                {% else %}
+                <img src="{% static 'race/images/race-sample.jpg' %}" alt="대회 로고">
+                {% endif %}
+                <button class="bookmark"></button>
+            </div>
+            <div class="race-info">
+                <p class="race-title">{{ race.title }}</p>
+                <p class="race-date">{{ race.date | date:"Y년 m월 d일" }}</p>
+                <p class="race-loc">{{ race.region }} {{ race.city }}</p>
+                <p class="course">
+                    {% for ct in race.course_type.all %}
+                        {{ ct.name }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+            </div>
+            
+        </li>
+
+        {% endfor %}
+    </ul>
+</div>
