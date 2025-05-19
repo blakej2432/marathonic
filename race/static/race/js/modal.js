@@ -6,6 +6,7 @@ const modalStatus = document.querySelector("#modal-status");
 const modalCourse = document.querySelector("#modal-course");
 const modalHome = document.querySelector("#modal-homepage");
 
+// 비동기 처리하기
 document.querySelectorAll(".race-item").forEach(item => {
     item.addEventListener("click", () => {
         const id = item.dataset.id;
@@ -17,7 +18,7 @@ document.querySelectorAll(".race-item").forEach(item => {
                 modalLoc.innerText = data.loc;
                 modalStatus.innerText = data.status;
                 modalCourse.innerText = data.course.join(', ');
-                modalHome.innerText = data.homepage;
+                modalHome.href = data.homepage;
                 modal.style.display = "block";
             });
     });

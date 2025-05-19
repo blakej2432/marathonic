@@ -46,7 +46,7 @@ header{
             margin-right: 50px;
             font-weight: 700;
             li{
-                min-width:80px;
+                /* min-width:80px; */
             }
         }
         ul.gnb-list{
@@ -59,7 +59,7 @@ header{
                 align-items: center;
                 a{
                     display: block;
-                    min-width:80px;
+                    /* min-width:80px; */
                     img{
                         max-width:24px;
                     }
