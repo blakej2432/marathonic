@@ -2,15 +2,16 @@ from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
 
 from race.models import Race
+from race.services import RaceService
 
 def index(request):
-    races = Race.objects.prefetch_related('course_type').all().order_by('date')
+    races = RaceService.get_all()
 
     return render(request, 'race/race.html', {'races': races})
 
 
 def race_detail_api(request, pk):
-    race = get_object_or_404(Race.objects.prefetch_related('course_type'), pk=pk)
+    race = RaceService.get_by_pk(pk)
     data = {
         "title": race.title,
         "date": race.date.strftime("%Y-%m-%d"),
