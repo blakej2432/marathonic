@@ -65,6 +65,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.naver',
     'allauth.socialaccount.providers.google',
 
+    #filter
+    'django_filters',
+
 ]
 
 if DEBUG:

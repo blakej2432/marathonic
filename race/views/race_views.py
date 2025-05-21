@@ -5,8 +5,7 @@ from race.models import Race
 from race.services import RaceService
 
 def index(request):
-    races = RaceService.get_all()
-
+    races = RaceService.get_filtered(request.GET)
     return render(request, 'race/race.html', {'races': races})
 
 
