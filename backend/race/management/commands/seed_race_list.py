@@ -14,11 +14,13 @@ COURSE_MAP = {
     "풀": "full",
 }
 
+
 def determine_code(raw: str) -> str:
     for key, code in COURSE_MAP.items():
         if key.lower() == raw.lower():
             return code
     return "etc"
+
 
 def parse_course_types(course_str: str):
     if pd.isna(course_str):
@@ -33,6 +35,7 @@ def parse_course_types(course_str: str):
         course_objs.append(course)
 
     return course_objs
+
 
 class Command(BaseCommand):
     help = "CSV 파일을 pandas로 불러와 DB에 대회 정보를 추가합니다."
@@ -49,7 +52,9 @@ class Command(BaseCommand):
         for _, row in df.iterrows():
             try:
                 title = row["대회제목"].strip()
-                date = datetime.strptime(str(row["대회날짜"]).strip(), "%Y-%m-%d").date()
+                date = datetime.strptime(
+                    str(row["대회날짜"]).strip(), "%Y-%m-%d"
+                ).date()
                 region = str(row["지역"]).strip()
                 course_str = str(row["코스타입"])
                 homepage = str(row["홈페이지"]).strip()
